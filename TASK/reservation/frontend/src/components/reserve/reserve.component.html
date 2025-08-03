@@ -1,0 +1,48 @@
+<div class="bg-art-one">
+  <div class="box">
+    <div class="elem-group inlined">
+      <label for="name">Your Name</label>
+      <p class="custom-box">{{ resevreData.name }}</p>
+    </div>
+    <div class="elem-group inlined">
+      <label for="email">Your E-mail</label>
+      <p class="custom-box">{{ resevreData.email }}</p>
+    </div>
+    <div class="elem-group inlined">
+      <label for="phone">Your Phone</label>
+      <p class="custom-box">{{ resevreData.phone }}</p>
+    </div>
+    <hr>
+    <div class="elem-group inlined">
+      <label for="room-selection">Select Room Preference</label>
+      <select id="room-selection" name="room_preference" [(ngModel)]="resevreData.roomPreference" required>
+        <option value="">Choose a Room from the List</option>
+        <option value="Room1">Room1</option>
+        <option value="Room2">Room2</option>
+        <option value="Room3">Room3</option>
+      </select>
+    </div>
+    <div class="elem-group inlined">
+      <label for="child">Salary Per Day</label>
+      <p class="custom-box">{{ resevreData.salaryPerDay }}</p>
+    </div>
+    <div class="elem-group inlined">
+      <label for="checkin-date">Check-in Date</label>
+      <input type="date" id="checkin-date" name="checkin" [(ngModel)]="resevreData.checkinDate" required>
+    </div>
+    <div class="elem-group inlined">
+      <label for="checkout-date">Check-out Date</label>
+      <input type="date" id="checkout-date" name="checkout" [(ngModel)]="resevreData.checkoutDate" required>
+    </div>
+    <div class="elem-group inlined">
+      <label for="child">Total Salary</label>
+      <p class="custom-box">{{ resevreData.totalSalary }}</p>
+    </div>
+    <hr>
+    <div class="elem-group">
+      <label for="message">Anything Else?</label>
+      <textarea id="message" name="visitor_message" [(ngModel)]="resevreData.visitorMessage" placeholder="Tell us anything else that might be important." required></textarea>
+    </div>
+    <button (click)="bookRooms()">Book The Rooms</button>
+  </div>
+</div>

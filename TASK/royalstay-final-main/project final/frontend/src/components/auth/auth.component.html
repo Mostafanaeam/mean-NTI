@@ -1,0 +1,89 @@
+<div #container class="container" [ngClass]="{'active': isRegisterMode}">
+  <!-- ************* LOGIN ************* -->
+  <div class="form-box login">
+      <form>
+          <h1>Login as an Owner</h1>
+          <div class="input-box">
+              <input type="text" placeholder="Username" required>
+              <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="input-box">
+              <input type="password" placeholder="Password" required>
+              <i class="fa-solid fa-lock"></i>
+          </div>
+          <div class="forgot-link">
+              <a href="#">Forgot Password?</a> |
+              <a href="#">Want to book a room?</a>
+          </div>
+          <button type="submit" class="btn">Login</button>
+      </form>
+  </div>
+
+  <!-- ************* REGISTER ************* -->
+  <div class="form-box register">
+      <form>
+          <h1>Create Account</h1>
+
+          <div class="input-group">
+              <div class="input-box">
+                  <input type="text" placeholder="First Name" required>
+                  <i class="fa-solid fa-user"></i>
+              </div>
+              <div class="input-box">
+                  <input type="text" placeholder="Last Name" required>
+                  <i class="fa-solid fa-user"></i>
+              </div>
+          </div>
+
+          <div class="input-box">
+              <input type="text" placeholder="Username" required>
+              <i class="fa-solid fa-user"></i>
+          </div>
+
+          <div class="input-box">
+              <input type="email" placeholder="Email" required>
+              <i class="fa-solid fa-envelope"></i>
+          </div>
+
+          <div class="input-group">
+              <div class="input-box">
+                  <input type="tel" placeholder="Phone" required>
+                  <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="input-box">
+                  <input type="number" placeholder="Age" required>
+                  <i class="fa-solid fa-calendar"></i>
+              </div>
+          </div>
+
+          <div class="input-box">
+              <select required>
+                  <option value="" disabled selected>Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+              </select>
+              <i class="fa-solid fa-venus-mars"></i>
+          </div>
+
+          <div class="input-box">
+              <input type="password" placeholder="Password" required>
+              <i class="fa-solid fa-lock"></i>
+          </div>
+
+          <button type="submit" class="btn">Register</button>
+      </form>
+  </div>
+
+  <div class="toggle-box">
+      <div class="toggle-panel toggle-left">
+          <h1>Hello, Welcome!</h1>
+          <p>Don't have an account?</p>
+          <button class="btn register-btn" (click)="toggleMode(true)">Register</button>
+      </div>
+      <div class="toggle-panel toggle-right">
+          <h1>Welcome Back!</h1>
+          <p>Already have an account?</p>
+          <button class="btn login-btn" (click)="toggleMode(false)">Login</button>
+      </div>
+  </div>
+</div>

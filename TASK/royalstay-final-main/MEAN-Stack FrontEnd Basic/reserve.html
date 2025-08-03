@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/reserve.css">
+  <title>Reservation</title>
+</head>
+<body>
+  <div class="bg-art-one">
+    <div class="box">
+      <div class="elem-group inlined">
+        <label for="name">Your Name</label>
+        <p class="custom-box">autofill</p>
+      </div>
+      <div class="elem-group inlined">
+        <label for="email">Your E-mail</label>
+        <p class="custom-box">autofill</p>
+      </div>
+      <div class="elem-group inlined">
+        <label for="phone">Your Phone</label>
+        <p class="custom-box">autofill</p>
+      </div>
+      <hr>
+      <div class="elem-group inlined">
+        <label for="room-selection">Select Room Preference</label>
+        <select id="room-selection" name="room_preference" required>
+            <option value="">Choose a Room from the List</option>
+            <option value="connecting">Room1</option>
+            <option value="adjoining">Room2</option>
+            <option value="adjacent">Room3</option>
+        </select>
+      </div>
+      <div class="elem-group inlined">
+        <label for="child">Salary Per Day</label>
+        <p class="custom-box">autofill</p>
+      </div> 
+      <div class="elem-group inlined">
+        <label for="checkin-date">Check-in Date</label>
+        <input type="date" id="checkin-date" name="checkin" required>
+      </div>
+      <div class="elem-group inlined">
+        <label for="checkout-date">Check-out Date</label>
+        <input type="date" id="checkout-date" name="checkout" required>
+      </div>
+      <div class="elem-group inlined">
+        <label for="child">Total Salary</label>
+        <p class="custom-box">autofill</p>
+      </div>
+      <hr>
+      <div class="elem-group">
+        <label for="message">Anything Else?</label>
+        <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+      </div>
+      <button type="submit">Book The Rooms</button>
+    </div>
+  </div>
+</body>
+<script src="./js/reserve.js"></script>
+</html>

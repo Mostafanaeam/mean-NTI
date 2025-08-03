@@ -1,0 +1,433 @@
+use FacultySystemDB;
+switched to db FacultySystemDB
+db.student.insertMany([
+  {
+    FirstName: "mohamed",
+    LastName: "Ali",
+    Age: 22,
+    Faculty: {
+      Name: "Engineering",
+      Address: "123 University Road"
+    },
+    Grades: [
+      { CourseName: "Math", Grade: 85, Pass: true },
+      { CourseName: "Physics", Grade: 78, Pass: true }
+    ],
+    IsFired: false
+  },
+  {
+    FirstName: "Sara",
+    LastName: "Mohamed",
+    Age: 20,
+    Faculty: {
+      Name: "Science",
+      Address: "45 Main Street"
+    },
+    Grades: [
+      { CourseName: "Biology", Grade: 88, Pass: true },
+      { CourseName: "Chemistry", Grade: 92, Pass: true }
+    ],
+    IsFired: false
+  },
+  {
+    FirstName: "Hassan",
+    LastName: "Ahmed",
+    Age: 19,
+    Faculty: {
+      Name: "Arts",
+      Address: "78 Arts Blvd"
+    },
+    Grades: [
+      { CourseName: "History", Grade: 72, Pass: true },
+      { CourseName: "Philosophy", Grade: 64, Pass: true }
+    ],
+    IsFired: true
+  }
+]);
+
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('674b5b03226438053a32603a'),
+    '1': ObjectId('674b5b03226438053a32603b'),
+    '2': ObjectId('674b5b03226438053a32603c')
+  }
+}
+db.student.find();
+{
+  _id: ObjectId('674b5b03226438053a32603a'),
+  FirstName: 'mohamed',
+  LastName: 'Ali',
+  Age: 22,
+  Faculty: {
+    Name: 'Engineering',
+    Address: '123 University Road'
+  },
+  Grades: [
+    {
+      CourseName: 'Math',
+      Grade: 85,
+      Pass: true
+    },
+    {
+      CourseName: 'Physics',
+      Grade: 78,
+      Pass: true
+    }
+  ],
+  IsFired: false
+}
+{
+  _id: ObjectId('674b5b03226438053a32603b'),
+  FirstName: 'Sara',
+  LastName: 'Mohamed',
+  Age: 20,
+  Faculty: {
+    Name: 'Science',
+    Address: '45 Main Street'
+  },
+  Grades: [
+    {
+      CourseName: 'Biology',
+      Grade: 88,
+      Pass: true
+    },
+    {
+      CourseName: 'Chemistry',
+      Grade: 92,
+      Pass: true
+    }
+  ],
+  IsFired: false
+}
+{
+  _id: ObjectId('674b5b03226438053a32603c'),
+  FirstName: 'Hassan',
+  LastName: 'Ahmed',
+  Age: 19,
+  Faculty: {
+    Name: 'Arts',
+    Address: '78 Arts Blvd'
+  },
+  Grades: [
+    {
+      CourseName: 'History',
+      Grade: 72,
+      Pass: true
+    },
+    {
+      CourseName: 'Philosophy',
+      Grade: 64,
+      Pass: true
+    }
+  ],
+  IsFired: true
+}
+db.student.find({ FirstName: "Ahmed" });
+db.student.find({ FirstName: "Ahmed" });
+db.student.find({
+  $or: [
+    { FirstName: "Ahmed" },
+    { LastName: "Ahmed" }
+  ]
+});
+{
+  _id: ObjectId('674b5b03226438053a32603c'),
+  FirstName: 'Hassan',
+  LastName: 'Ahmed',
+  Age: 19,
+  Faculty: {
+    Name: 'Arts',
+    Address: '78 Arts Blvd'
+  },
+  Grades: [
+    {
+      CourseName: 'History',
+      Grade: 72,
+      Pass: true
+    },
+    {
+      CourseName: 'Philosophy',
+      Grade: 64,
+      Pass: true
+    }
+  ],
+  IsFired: true
+}
+db.student.find({ FirstName: { $ne: "Ahmed" } });
+{
+  _id: ObjectId('674b5b03226438053a32603a'),
+  FirstName: 'mohamed',
+  LastName: 'Ali',
+  Age: 22,
+  Faculty: {
+    Name: 'Engineering',
+    Address: '123 University Road'
+  },
+  Grades: [
+    {
+      CourseName: 'Math',
+      Grade: 85,
+      Pass: true
+    },
+    {
+      CourseName: 'Physics',
+      Grade: 78,
+      Pass: true
+    }
+  ],
+  IsFired: false
+}
+{
+  _id: ObjectId('674b5b03226438053a32603b'),
+  FirstName: 'Sara',
+  LastName: 'Mohamed',
+  Age: 20,
+  Faculty: {
+    Name: 'Science',
+    Address: '45 Main Street'
+  },
+  Grades: [
+    {
+      CourseName: 'Biology',
+      Grade: 88,
+      Pass: true
+    },
+    {
+      CourseName: 'Chemistry',
+      Grade: 92,
+      Pass: true
+    }
+  ],
+  IsFired: false
+}
+{
+  _id: ObjectId('674b5b03226438053a32603c'),
+  FirstName: 'Hassan',
+  LastName: 'Ahmed',
+  Age: 19,
+  Faculty: {
+    Name: 'Arts',
+    Address: '78 Arts Blvd'
+  },
+  Grades: [
+    {
+      CourseName: 'History',
+      Grade: 72,
+      Pass: true
+    },
+    {
+      CourseName: 'Philosophy',
+      Grade: 64,
+      Pass: true
+    }
+  ],
+  IsFired: true
+}
+db.student.find({ Age: { $lt: 21 } });
+{
+  _id: ObjectId('674b5b03226438053a32603b'),
+  FirstName: 'Sara',
+  LastName: 'Mohamed',
+  Age: 20,
+  Faculty: {
+    Name: 'Science',
+    Address: '45 Main Street'
+  },
+  Grades: [
+    {
+      CourseName: 'Biology',
+      Grade: 88,
+      Pass: true
+    },
+    {
+      CourseName: 'Chemistry',
+      Grade: 92,
+      Pass: true
+    }
+  ],
+  IsFired: false
+}
+{
+  _id: ObjectId('674b5b03226438053a32603c'),
+  FirstName: 'Hassan',
+  LastName: 'Ahmed',
+  Age: 19,
+  Faculty: {
+    Name: 'Arts',
+    Address: '78 Arts Blvd'
+  },
+  Grades: [
+    {
+      CourseName: 'History',
+      Grade: 72,
+      Pass: true
+    },
+    {
+      CourseName: 'Philosophy',
+      Grade: 64,
+      Pass: true
+    }
+  ],
+  IsFired: true
+}
+db.student.find({ IsFired: true });
+{
+  _id: ObjectId('674b5b03226438053a32603c'),
+  FirstName: 'Hassan',
+  LastName: 'Ahmed',
+  Age: 19,
+  Faculty: {
+    Name: 'Arts',
+    Address: '78 Arts Blvd'
+  },
+  Grades: [
+    {
+      CourseName: 'History',
+      Grade: 72,
+      Pass: true
+    },
+    {
+      CourseName: 'Philosophy',
+      Grade: 64,
+      Pass: true
+    }
+  ],
+  IsFired: true
+}
+db.student.find({
+  Age: { $gte: 21 },
+  Faculty: { $exists: true }
+});
+{
+  _id: ObjectId('674b5b03226438053a32603a'),
+  FirstName: 'mohamed',
+  LastName: 'Ali',
+  Age: 22,
+  Faculty: {
+    Name: 'Engineering',
+    Address: '123 University Road'
+  },
+  Grades: [
+    {
+      CourseName: 'Math',
+      Grade: 85,
+      Pass: true
+    },
+    {
+      CourseName: 'Physics',
+      Grade: 78,
+      Pass: true
+    }
+  ],
+  IsFired: false
+}
+db.student.find(
+  { FirstName: "Ahmed" },
+  { FirstName: 1, LastName: 1, IsFired: 1 }
+);
+db.student.updateOne(
+  { FirstName: "Ahmed" },
+  { $set: { LastName: "Hussein" } }
+);
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+db.student.find(
+  { FirstName: "mohamed" },
+  { FirstName: 1, LastName: 1, IsFired: 1 }
+);
+{
+  _id: ObjectId('674b5b03226438053a32603a'),
+  FirstName: 'mohamed',
+  LastName: 'Ali',
+  IsFired: false
+}
+db.student.updateOne(
+  { FirstName: "mohamed" },
+  { $set: { LastName: "Hussein" } }
+);
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.student.deleteMany({ IsFired: true });
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+db.student.deleteMany({ IsFired: true });
+{
+  acknowledged: true,
+  deletedCount: 0
+}
+db.student.deleteMany({ IsFired: true });
+{
+  acknowledged: true,
+  deletedCount: 0
+}
+db.student.drop();
+true
+db.dropDatabase();
+{ ok: 1, dropped: 'FacultySystemDB' }
+use FacultySystemV2;
+switched to db FacultySystemV2
+db.student.insertMany([
+  {
+    FirstName: "Ahmed",
+    LastName: "Ali",
+    IsFired: false,
+    FacultyID: "FAC01",
+    Courses: [
+      { CourseID: "CSE101", Grade: 88 },
+      { CourseID: "CSE102", Grade: 90 }
+    ]
+  },
+  {
+    FirstName: "Sara",
+    LastName: "Mohamed",
+    IsFired: false,
+    FacultyID: "FAC02",
+    Courses: [
+      { CourseID: "BIO101", Grade: 85 },
+      { CourseID: "BIO102", Grade: 89 }
+    ]
+  }
+]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('674b5f29226438053a32603d'),
+    '1': ObjectId('674b5f29226438053a32603e')
+  }
+}
+db.faculty.insertMany([
+  { FacultyID: "FAC01", Name: "Engineering", Address: "123 University Road" },
+  { FacultyID: "FAC02", Name: "Science", Address: "45 Main Street" }
+]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('674b5f31226438053a32603f'),
+    '1': ObjectId('674b5f31226438053a326040')
+  }
+}
+db.course.insertMany([
+  { CourseID: "CSE101", Name: "Computer Science 101", FinalMark: 100 },
+  { CourseID: "BIO101", Name: "Biology 101", FinalMark: 100 }
+]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('674b5f38226438053a326041'),
+    '1': ObjectId('674b5f38226438053a326042')
+  }
+}
+FacultySystemV2

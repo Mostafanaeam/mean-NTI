@@ -1,0 +1,40 @@
+@import url("style.css");
+.cartcont {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+}
+
+.Cart {
+  margin: 150px auto;
+  min-width: 60%;
+  max-width: 90%;
+  display: flex;
+  justify-content: center;
+  border: 2px solid var(--navy);
+  border-radius: 25px;
+  box-shadow: var(--box-shadow);
+  backdrop-filter: var(--filter);
+}
+.cart1 {
+  border-right: 2px dashed var(--navy);
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  text-align: end;
+}
+.cart1,
+.cart2 {
+  padding: 50px 0;
+}
+
+.cart1 p,
+.cart2 p {
+  padding: 10px 40px;
+  font-size: xx-large;
+  color: var(--navy);
+  width: 100%;
+}

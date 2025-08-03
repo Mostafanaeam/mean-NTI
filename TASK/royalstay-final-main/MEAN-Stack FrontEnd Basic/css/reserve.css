@@ -1,0 +1,122 @@
+@import url("./style.css");
+
+.bg-art-one {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.bg-art-one .box {
+    margin:120px 0;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    backdrop-filter: var(--filter);
+    box-shadow: var(--box-shadow);
+    background: var(--bg-one);
+    border-radius: var(--radius-one);
+}
+.custom-box {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.25em;
+    border: 1px solid #777;
+    border-radius: 4px;
+    background-color: white;
+    min-height: 40px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    cursor: text; /* عشان يحسسك إنه input */
+}
+
+div.elem-group {
+    margin: 15px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.elem-group.inlined {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+div.elem-group.inlined input {
+    width: 100%;
+}
+
+label {
+    display: block;
+    font-family: 'Nanum Gothic', sans-serif;
+    padding-bottom: 5px;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    border-radius: 5px;
+    border: 1px solid #777;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: 'Nanum Gothic', sans-serif;
+    width: 100%;
+    padding: 8px;
+}
+
+textarea {
+    height: 120px;
+}
+
+hr {
+    border: 1px dotted #ccc;
+    margin: 15px 0;
+}
+
+button {
+    width: 100%;
+    height: 60px;
+    background: var(--navy);
+    border: none;
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    font-family: 'Nanum Gothic', sans-serif;
+    border-radius: var(--radius-one);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: var(--gold);
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+    .bg-art-one .box {
+        width: 80%;
+        max-width: 600px;
+    }
+}
+
+@media (min-width: 768px) {
+    .bg-art-one .box {
+        max-width: 700px;
+    }
+    
+    div.elem-group.inlined {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    div.elem-group.inlined label,
+    div.elem-group.inlined input {
+        width: 48%;
+    }
+}
