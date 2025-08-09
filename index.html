@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mean Stack Development Navigator @ NTI ASWAN</title>
+
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root {
+      --primary-color: #f97316;
+      --primary-dark: #ea580c;
+      --primary-light: #fb923c;
+      --background-light: #fff7ed;
+      --text-dark: #1e293b;
+      --text-light: #f8fafc;
+    }
+
+    body {
+      background-color: var(--background-light);
+      color: var(--text-dark);
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem 1rem;
+      border-radius: 0.375rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      background-color: var(--primary-color);
+      color: var(--text-light);
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .card {
+      background-color: var(--text-light);
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-title {
+      font-size: 1.875rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--text-dark);
+    }
+
+    fieldset {
+      border: 2px solid var(--primary-color);
+      border-radius: 0.5rem;
+      margin-bottom: 2rem;
+      padding: 1rem;
+    }
+
+    legend {
+      padding: 0 1rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--primary-dark);
+    }
+  </style>
+</head>
+<body class="p-6">
+  <div class="container mx-auto">
+    <h1 class="section-title">Mean Stack Development Navigator @ NTI ASWAN</h1>
+
+    <!-- Daily Work -->
+    <fieldset>
+      <legend>Daily Work</legend>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+        <div class="card"><a href="https://github.com/Mostafanaeam/mean-day1" target="_blank" class="btn w-full justify-center">Day 1</a></div>
+        <div class="card"><a href="https://github.com/Mostafanaeam/mean-day2" target="_blank" class="btn w-full justify-center">Day 2</a></div>
+        <div class="card"><a href="https://github.com/Mostafanaeam/mean-day5" target="_blank" class="btn w-full justify-center">Day 5</a></div>
+        <div class="card"><a href="https://github.com/Mostafanaeam/mean-day6" target="_blank" class="btn w-full justify-center">Day 6</a></div>
+        <div class="card"><a href="https://github.com/Mostafanaeam/mean-day7" target="_blank" class="btn w-full justify-center">Day 7</a></div>
+        <div class="card"><a href="https://github.com/Mostafanaeam/mean-day8" target="_blank" class="btn w-full justify-center">Day 8</a></div>
+        <div class="card"><a href="https://github.com/Mostafanaeam/mean-day9" target="_blank" class="btn w-full justify-center">Day 9</a></div>
+        <div class="card"><a href="https://github.com/Mostafanaeam/mean-day10" target="_blank" class="btn w-full justify-center">Day 10</a></div>
+        <div class="card"><a href="https://github.com/Mostafanaeam/mean-day11" target="_blank" class="btn w-full justify-center">Day 11</a></div>
+        <div class="card"><a href="https://github.com/Mostafanaeam/mean-day12" target="_blank" class="btn w-full justify-center">Day 12</a></div>
+        <div class="card"><a href="https://github.com/Mostafanaeam/mean-day13" target="_blank" class="btn w-full justify-center">Day 13</a></div>
+        <div class="card"><a href="https://github.com/Mostafanaeam/mean-day14" target="_blank" class="btn w-full justify-center">Day 14</a></div>
+        <div class="card"><a href="https://github.com/Mostafanaeam/mean-day15" target="_blank" class="btn w-full justify-center">Day 15</a></div>
+      </div>
+    </fieldset>
+
+    <!-- Extra Resources -->
+    <fieldset>
+      <legend>Extra Resources</legend>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+        <div class="card"><a href="https://github.com/Mostafanaeam/mean-instractor" target="_blank" class="btn w-full justify-center">Instructor Resources</a></div>
+        <div class="card"><a href="https://github.com/Mostafanaeam/mean-task" target="_blank" class="btn w-full justify-center">Extra Task</a></div>
+      </div>
+    </fieldset>
+  </div>
+</body>
+</html>
